@@ -45,8 +45,8 @@ Users should be able to:
 
 ## Installation
 
--Run `npm install` to install all dependancies required.
--Run `npm run dev` to start local development server.
+Run `npm install` to install all dependancies required.
+Run `npm run dev` to start local development server.
 
 
 
