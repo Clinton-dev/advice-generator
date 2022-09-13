@@ -30,8 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://prismatic-biscuit-43739b.netlify.app/)
 
 ## My process
 
@@ -44,8 +43,9 @@ Users should be able to:
 - [Tailwindcss](https://nextjs.org/) - Tailwind
 
 ## Installation
--Run `npm install` to install all dependancies required.
--Run `npm run dev` to start local development server.
+
+Run `npm install` to install all dependancies required.
+Run `npm run dev` to start local development server.
 
 
 
