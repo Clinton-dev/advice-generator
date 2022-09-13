@@ -43,7 +43,7 @@ function Card() {
             <div className='block mt-6 mb-10 sm:hidden'>
                 <img className="w-full" src={desktopDivider} alt="divider svg" />
             </div>
-            <div className='absolute -bottom-8 md:right-1/2 md:translate-x-6 sm:right-32 lg:translate-x-2'>
+            <div id="icons" className='absolute -bottom-8 right-[80px]'>
                 <button className='mr-4 bg-NeonGreen p-4 rounded-full  hover:drop-shadow-[0_0_25px_hsl(150, 100%, 66%)]' onClick={addFavourites}>
                     <img className="w-6 h-6 text-white" src={favIcon} alt=" icon image" />
                 </button>

@@ -2,3 +2,18 @@ button:hover,
 button:active {
     box-shadow: 0 0 20px hsl(150, 100%, 66%);
 }
+
+
+@media only screen and (min-width: 600px) {
+    #icons {
+        right: 30%;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    #icons {
+        right: 35%;
+    }
+}
