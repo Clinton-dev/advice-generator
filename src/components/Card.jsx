@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react';
 import desktopDivider from '../assets/pattern-divider-desktop.svg';
 import mobileDivider from '../assets/pattern-divider-mobile.svg';
 import iconDevice from '../assets/icon-dice.svg';
+import favIcon from '../assets/star-fill.svg';
 import './Card.css';
 
 
 function Card() {
     const [advice, setAdvice] = useState({});
+    const [favourites, setFavourites] = useState([]);
 
     const getAdvice = () => {
         // fetch advice
@@ -17,6 +19,11 @@ function Card() {
 
     const newAdvice = () => {
         getAdvice();
+    }
+
+    const addFavourites = () => {
+        setFavourites(prev => [...prev, advice]);
+        localStorage.setItem('favs', JSON.stringify(favourites))
     }
 
     useEffect(() => {
@@ -36,9 +43,15 @@ function Card() {
             <div className='block mt-6 mb-10 sm:hidden'>
                 <img className="w-full" src={desktopDivider} alt="divider svg" />
             </div>
-            <button className=' bg-NeonGreen p-4 rounded-full absolute -bottom-8 md:right-1/2 md:translate-x-6 sm:right-32 lg:translate-x-8 hover:drop-shadow-[0_0_25px_hsl(150, 100%, 66%)]' onClick={newAdvice}>
-                <img src={iconDevice} alt=" icon image" />
-            </button>
+            <div id="icons" className='absolute -bottom-8 right-[80px]'>
+                <button className='mr-4 bg-NeonGreen p-4 rounded-full  hover:drop-shadow-[0_0_25px_hsl(150, 100%, 66%)]' onClick={addFavourites}>
+                    <img className="w-6 h-6 text-white" src={favIcon} alt=" icon image" />
+                </button>
+
+                <button className=' bg-NeonGreen p-4 rounded-full  hover:drop-shadow-[0_0_25px_hsl(150, 100%, 66%)]' onClick={newAdvice}>
+                    <img src={iconDevice} alt=" icon image" />
+                </button>
+            </div>
         </div>
     )
 }
